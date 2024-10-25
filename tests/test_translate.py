@@ -19,8 +19,8 @@ def test_reverse_complement_with_empty_sequence():
 
 def test_translate_standard_sequences():
     # Test basic translation with complete codons
-    assert translate("ATGGCC") == "MA", "Failed to translate 'ATGGCC' to 'MA'"
-    assert translate("GGTACC") == "GP", "Failed to translate 'GGTACC' to 'GP'"
+    assert translate("ATGGCTTCCTCCGAAGACGTTATCAAAGAGTTCATG") == "MASSEDVIKEFM", "Failed to translate mRFP no stop"
+    assert translate("ATGGCTTCCTCCGAAGACGTTATCAAAGAGTTCATGTAA") == "MASSEDVIKEFM_", "Failed to translate mRFP with stop"
     
 def test_translate_with_invalid_characters():
     # Test translate with invalid characters in sequence
@@ -37,7 +37,7 @@ def test_translate_with_non_multiple_of_three():
 def test_translate_with_stop_codon():
     # Test for sequences containing stop codons
     assert translate("ATGTAA") == "M_", "Failed to translate stop codon 'TAA' in 'ATGTAA'"
-    assert translate("TGGATTAG") == "WI_", "Failed to translate stop codon 'TAG' in 'TGGATTAG'"
+    assert translate("TGGATATAG") == "WI_", "Failed to translate stop codon 'TAG' in 'TGGATTAG'"
 
 def test_translate_with_empty_sequence():
     # Test with an empty sequence
