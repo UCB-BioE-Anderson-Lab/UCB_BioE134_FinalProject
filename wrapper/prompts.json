@@ -3,73 +3,97 @@
     {
       "request": "What would you get if you flipped and complemented 'ATGC'?",
       "expected_call": {
+        "endpoint": "run",
         "function_id": "org.c9.function.bioe_134.reverse_complement",
         "arguments": {
           "sequence": "ATGC"
         }
       },
       "expected_response": {
-        "sequence": "GCAT"
+        "text_response": "The reverse complement of 'ATGC' is 'GCAT'.",
+        "data": {
+          "sequence": "GCAT"
+        }
       }
     },
     {
       "request": "Turn 'ATGGCC' into amino acids.",
       "expected_call": {
+        "endpoint": "run",
         "function_id": "org.c9.function.bioe_134.translate",
         "arguments": {
           "sequence": "ATGGCC"
         }
       },
       "expected_response": {
-        "sequence": "MA"
+        "text_response": "The amino acid sequence for 'ATGGCC' is 'MA'.",
+        "data": {
+          "sequence": "MA"
+        }
       }
     },
     {
       "request": "Flip and complement 'GCTAGC' for me.",
       "expected_call": {
+        "endpoint": "run",
         "function_id": "org.c9.function.bioe_134.reverse_complement",
         "arguments": {
           "sequence": "GCTAGC"
         }
       },
       "expected_response": {
-        "sequence": "GCTAGC"
+        "text_response": "The reverse complement of 'GCTAGC' is 'GCTAGC'.",
+        "data": {
+          "sequence": "GCTAGC"
+        }
       }
     },
     {
       "request": "Convert 'GGTACC' to its corresponding amino acids.",
       "expected_call": {
+        "endpoint": "run",
         "function_id": "org.c9.function.bioe_134.translate",
         "arguments": {
           "sequence": "GGTACC"
         }
       },
       "expected_response": {
-        "sequence": "GP"
+        "text_response": "The amino acid sequence for 'GGTACC' is 'GP'.",
+        "data": {
+          "sequence": "GP"
+        }
       }
     },
     {
       "request": "What’s the reverse of 'TTAGGCTA' with complements?",
       "expected_call": {
+        "endpoint": "run",
         "function_id": "org.c9.function.bioe_134.reverse_complement",
         "arguments": {
           "sequence": "TTAGGCTA"
         }
       },
       "expected_response": {
-        "sequence": "TAGCCTAA"
+        "text_response": "The reverse complement of 'TTAGGCTA' is 'TAGCCTAA'.",
+        "data": {
+          "sequence": "TAGCCTAA"
+        }
       }
     },
     {
       "request": "Can you turn 'ATGCGTGA' into a protein sequence?",
       "expected_call": {
+        "endpoint": "run",
         "function_id": "org.c9.function.bioe_134.translate",
         "arguments": {
           "sequence": "ATGCGTGA"
         }
       },
       "expected_response": {
-        "sequence": "MR"
+        "text_response": "The amino acid sequence for 'ATGCGTGA' is 'MR'.",
+        "data": {
+          "sequence": "MR"
+        }
       }
     }
   ]
